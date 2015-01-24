@@ -102,6 +102,15 @@ class TimeTrigger: Trigger {
         self.messageID = messageID
         self.delay = delay
         self.timeout = Timeout(callback: self.trigger, delay: delay)
+        
+        // Local notification of event
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertAction = "Testing notifications on iOS8"
+        localNotification.alertBody = "You have recieved a new secure communication!"
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: delay)
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.category = "invite"
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
     
     func trigger() -> Void{

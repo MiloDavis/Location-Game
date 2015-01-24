@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //var world = Mission(puzzles: [Puzzle], puzzleIndex: <#Int#>)
-        /*var m = Message(body: TextMessage(text: "This is a message test"), id: "m2", calling: [String]())
-        m.alert()*/
+        let notificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let settings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
+        application.registerUserNotificationSettings(settings)
         TimeTrigger(messageID: "m1", delay: 10)
         return true
     }
