@@ -1,11 +1,3 @@
-//
-//  World.swift
-//  LocationPuzzleGame
-//
-//  Created by Jack Frysinger on 1/24/15.
-//  Copyright (c) 2015 Jack Frysinger. All rights reserved.
-//
-
 import Foundation
 import CoreLocation
 
@@ -28,6 +20,7 @@ class World {
     var currentPuzzle: Puzzle? = nil
     var recievedMessages: [Message] = []
     var unreadMessages: Int = 0
+    var messageSenders: [MessageSender] = [MessageSender(name:"Jefferson", imageName:"qm"), MessageSender(name:"Washington", imageName:"guyFawkes")]
     
     
     init() {

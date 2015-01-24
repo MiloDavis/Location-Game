@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OTL-zC-Fae" kind="show" id="ylL-sr-GS5"/>
+                                    <segue destination="OTL-zC-Fae" kind="show" id="q8e-wu-R9a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOK-e7-L5N">
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm7-G4-tdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="-1166"/>
+            <point key="canvasLocation" x="2295" y="-880"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yna-1w-OIx">

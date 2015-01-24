@@ -27,23 +27,35 @@ class SilentMessage:MessageBody{
     var text = "[Silent]"
 }
 
+class MessageSender{
+    var name: String
+    let imageName: String
+    init(name: String, imageName: String) {
+        self.name = name
+        self.imageName = imageName
+    }
+}
+
 // Message defined based
-class Message{
+class Message {
     var viewed = false
     var delivered = false
     var calling = [String]()// Messages the message will start
     var body: MessageBody
     var id:String
+    //var from: String
     //var timerStart
-    init(body:MessageBody, id:String, calling:[String]){
+    init(body:MessageBody, id:String, calling:[String]/*, from:String*/){
         self.body = body
         self.id = id
         self.calling = calling
+        //self.from = from
         
     }
     func deliver(){
         self.alert()
         var w = World.sharedInstance
+        w.unreadMessages += 1
         var messages = w.puzzles[w.currentPuzzleIndex].messages
         for call in calling {
             for m in messages {
