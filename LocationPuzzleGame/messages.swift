@@ -26,7 +26,8 @@ class Message: PMessage{
 func messageTest(){
     var message = Message()
     message.deliver()
-    var timeout = Timeout(callback:test, delay:5)
+    var timeout = Timeout(callback:test, delay:2.0)
+    //timeout.stop()
 }
 
 
