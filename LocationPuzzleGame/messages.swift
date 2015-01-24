@@ -18,7 +18,9 @@ class Message: PMessage{
         //mission.unreadMessages += 1
         
     }
-  
+    func atLocation(){
+        
+    }
 }
 
 func messageTest(){
