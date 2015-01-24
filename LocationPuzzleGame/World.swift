@@ -22,13 +22,13 @@ class World {
         
         return Static.instance!
     }
-    
-    var puzzles: [Puzzle] = []
+
+    var puzzles : [Puzzle] = [initPuzzle()]
     var currentPuzzleIndex: Int = 0
     var currentPuzzle: Puzzle? = nil
     var recievedMessages: [Message] = []
     var unreadMessages: Int = 0
-    var hints: [Hint] = [Hint(images: [nil], text: "Hello")]
+    
     
     init() {
         
@@ -45,7 +45,6 @@ class World {
     
     func nextPuzzle() {
         self.currentPuzzle = self.puzzles[self.currentPuzzleIndex]
-        self.hints = self.currentPuzzle!.hints
         self.currentPuzzleIndex++
     }
     
@@ -54,3 +53,12 @@ class World {
     }
     
 }
+
+func initPuzzle() -> Puzzle{
+    var loc = CLLocationCoordinate2D(latitude: 80.0, longitude: 80.0)
+    var mes:[Message] = [Message(body:TextMessage(text: "Test message is here."), id: "m1", calling: [""])]
+    var hint:[Message] = [Message(body: TextMessage(text: "asdfasdfasdf"), id:"m1", calling:[String]())]
+    var p : Puzzle = Puzzle(location: loc, messages: mes, hints: hint)
+    return p
+}
+

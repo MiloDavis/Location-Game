@@ -14,7 +14,6 @@ class MessagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         renderMessages([TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field"), TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field")])
-        println(messagesScrollview)
         // Do any additional setup after loading the view.
     }
     func renderMessages(messages:[MessageBody]){
@@ -24,9 +23,7 @@ class MessagesViewController: UIViewController {
                 yStart += renderText(message as TextMessage, start: yStart)
             }
             else if(message.type == "Image"){
-                println(yStart)
                 yStart += renderImage(message as ImageMessage, start: yStart)
-                println(yStart)
             }
             messagesScrollview.contentSize = CGSize(width:UIScreen.mainScreen().bounds.width, height: yStart)
         }

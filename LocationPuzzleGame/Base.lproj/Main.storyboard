@@ -30,9 +30,6 @@
                                 <state key="normal" title="Solve Puzzle">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="wYN-hL-WaW" kind="show" id="rPU-zh-TX8"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,7 +46,6 @@
         <!--Messages View Controller-->
         <scene sceneID="s3d-Ic-a5K">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pm7-G4-tdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OTL-zC-Fae" customClass="MessagesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GvR-dN-R0t"/>
@@ -65,6 +61,7 @@
                         <outlet property="messagesScrollview" destination="5zz-XE-gVu" id="5Sw-jA-dxG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pm7-G4-tdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2295" y="-1166"/>
         </scene>

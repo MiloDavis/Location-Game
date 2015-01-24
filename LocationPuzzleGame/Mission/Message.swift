@@ -3,25 +3,28 @@ import UIKit
 // Creates a message
 protocol MessageBody{
     var type:String{ get set }
+    // This is to allow me to alert text events
+    var text:String{ get set }
 }
 // Message made up only of a String
-class TextMessage:MessageBody{
-    var text:String
+class TextMessage:MessageBody {
+    var text: String
     var type = "Text"
-    init(text:String){
+    init(text: String) {
         self.text = text
     }
 }
-class ImageMessage:MessageBody{
-    var path:String
+class ImageMessage:MessageBody {
+    var path: String
     var type = "Image"
+    var text = "[Image]"
     init(imageName:String){
         self.path =  imageName
-        //"/Users/alicedavis/Documents/IOS Dev/Location-Game/LocationPuzzleGame/Mission/imageMessages/"
     }
 }
 class SilentMessage:MessageBody{
     var type = "Silent"
+    var text = "[Silent]"
 }
 
 // Message defined based
@@ -30,15 +33,41 @@ class Message{
     var delivered = false
     var calling = [String]()// Messages the message will start
     var body: MessageBody
+    var id:String
     //var timerStart
-    init(body:MessageBody, calling:[String]){
+    init(body:MessageBody, id:String, calling:[String]){
         self.body = body
+        self.id = id
         self.calling = calling
         
     }
     func deliver(){
+        self.alert()
+        var w = World.sharedInstance
+        var messages = w.puzzles[w.currentPuzzleIndex].messages
+        for call in calling {
+            for m in messages {
+                m.start()
+            }
+        }
+    }
+    
+    func alert(){
+        if(self.body.type == "Silent"){
+            
+        }
+        else if(self.body.type == "Text"){
+            var alert = UIAlertView()
+            alert.title = "New Secure Communication:"
+            alert.message = self.body.text
+            alert.addButtonWithTitle("Later")
+            alert.addButtonWithTitle("View")
+            alert.show()
+            
+        }
         
     }
+    
     func atLocation(){
         
     }
@@ -47,22 +76,44 @@ class Message{
     }
 }
 
-
 func messageTest(){
-    var message = Message(body: TextMessage(text:"asdfasdfasdfasdf"), calling:[String]())
+    var trig = TimeTrigger(messageID:"m1", delay:5)
+}
+protocol Trigger {
+    
+}
+class TimeTrigger: Trigger {
+    var delay:Double
+    var timeout: Timeout? = nil
+    var messageID: String
+    init(messageID: String, delay: Double){
+        self.messageID = messageID
+        self.delay = delay
+        self.timeout = Timeout(callback: self.trigger, delay: delay)
+    }
+    
+    func trigger() -> Void{
+        var w = World.sharedInstance
+        var messages = w.puzzles[w.currentPuzzleIndex].messages
+        for m in messages{
+            if(m.id == messageID){
+                m.deliver()
+            }
+        }
+    }
 }
 
+// Calls the given callback after the given delay (in seconds)
 class Timeout{
     var callback: Void -> Void // Function called after delay
     var delay:Double // In seconds
     var canceled = false
-    init(callback:Void -> Void, delay:Double){
+    init(callback:Void -> Void, delay:Double) {
         self.delay = delay
         self.callback = callback
         self.start()
     }
     func start(){
-        //setting the delay time 60secs.
         let delay = self.delay * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {

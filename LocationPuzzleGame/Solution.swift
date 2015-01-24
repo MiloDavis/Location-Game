@@ -11,11 +11,9 @@ import CoreLocation
 
 class Solution {
     var location : CLRegion
-    let answer : String
     
-    init(location : CLRegion, answer : String) {
+    init(location : CLRegion) {
         self.location = location
-        self.answer = answer
     }
     
 }

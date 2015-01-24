@@ -11,20 +11,12 @@ import CoreLocation
 
 class Puzzle {
     var location: CLLocationCoordinate2D
-    var hints: [Hint]
+    var messages: [Message]
+    var hints: [Message]
     
-    init(location: CLLocationCoordinate2D, hints: [Hint]) {
+    init(location: CLLocationCoordinate2D, messages:[Message], hints: [Message]) {
         self.location = location
+        self.messages = messages
         self.hints = hints
-    }
-}
-
-class Hint {
-    var images: [String?]
-    var text: String
-    
-    init(images: [String?], text: String) {
-        self.images = images
-        self.text = text
     }
 }
