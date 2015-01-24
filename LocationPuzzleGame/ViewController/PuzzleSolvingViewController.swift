@@ -17,11 +17,8 @@ class PuzzleSolvingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let hints = world.hints
-        
         for hint in hints {
-            for textItem in hint.text {
-                self.hintTextView.text! += "\n \(textItem)"
-            }
+            self.hintTextView.text! += "\n \(hint.text)"
         }
     }
 }
