@@ -1,16 +1,8 @@
-//
-//  Message.swift
-//  LocationPuzzleGame
-//
-//  Created by Jack Frysinger on 1/24/15.
-//  Copyright (c) 2015 Jack Frysinger. All rights reserved.
-//
-
 import UIKit
 
 // Creates a message
 protocol MessageBody{
-    func render()
+    
 }
 // Message made up only of a String
 class TextMessage:MessageBody{
@@ -18,22 +10,16 @@ class TextMessage:MessageBody{
     init(text:String){
         self.text = text
     }
-    
-    func render(){
-        
-    }
 }
 class ImageMessage:MessageBody{
-    func render(){
-        
+    var path:String
+    init(imageName:String){
+        self.path = "/Users/alicedavis/Documents/IOS Dev/Location-Game/LocationPuzzleGame/Mission/imageMessages/" + imageName
     }
 }
 class SilentMessage:MessageBody{
-    func render(){
-        
-    }
+    
 }
-
 
 // Message defined based
 class Message{
@@ -61,7 +47,6 @@ class Message{
 
 func messageTest(){
     var message = Message(body: TextMessage(text:"asdfasdfasdfasdf"), calling:[String]())
-    message.deliver()
 }
 
 class Timeout{

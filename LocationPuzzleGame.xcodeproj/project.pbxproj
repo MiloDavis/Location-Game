@@ -18,6 +18,8 @@
 		70B1594D1A73832400F29535 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594C1A73832400F29535 /* Message.swift */; };
 		70B1594F1A738BA100F29535 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594E1A738BA100F29535 /* Hint.swift */; };
 		70B159551A73985300F29535 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159541A73985300F29535 /* MessagesViewController.swift */; };
+		E46547A31A73B7B1006E2D63 /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = E46547A11A73B7B1006E2D63 /* field.png */; };
+		E46547A41A73B7B1006E2D63 /* scouting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46547A21A73B7B1006E2D63 /* scouting.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		70B1594C1A73832400F29535 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Mission/Message.swift; sourceTree = "<group>"; };
 		70B1594E1A738BA100F29535 /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		70B159541A73985300F29535 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ViewController/MessagesViewController.swift; sourceTree = "<group>"; };
+		E46547A11A73B7B1006E2D63 /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = field.png; sourceTree = "<group>"; };
+		E46547A21A73B7B1006E2D63 /* scouting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scouting.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 		70B159481A736C4800F29535 /* Mission */ = {
 			isa = PBXGroup;
 			children = (
+				E465479C1A73B753006E2D63 /* imageMessages */,
 				70B1594C1A73832400F29535 /* Message.swift */,
 				70B159461A736C4100F29535 /* Mission.swift */,
 				70B159491A736D1500F29535 /* Puzzle.swift */,
@@ -149,6 +154,16 @@
 				70B159541A73985300F29535 /* MessagesViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E465479C1A73B753006E2D63 /* imageMessages */ = {
+			isa = PBXGroup;
+			children = (
+				E46547A11A73B7B1006E2D63 /* field.png */,
+				E46547A21A73B7B1006E2D63 /* scouting.jpg */,
+			);
+			name = imageMessages;
+			path = Mission/imageMessages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46547A41A73B7B1006E2D63 /* scouting.jpg in Resources */,
+				E46547A31A73B7B1006E2D63 /* field.png in Resources */,
 				70B1592C1A734BEB00F29535 /* Main.storyboard in Resources */,
 				70B159311A734BEB00F29535 /* LaunchScreen.xib in Resources */,
 				70B1592E1A734BEB00F29535 /* Images.xcassets in Resources */,
