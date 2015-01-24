@@ -10,15 +10,30 @@ import UIKit
 
 class MessagesViewController: UIViewController {
     
+    @IBOutlet var messagesScrollview: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        renderTextMessage(TextMessage(text:"This is a test to see if newline behavior is still funcitoning properly.  I am hoping that this will work."))
-        
-        renderImageMessage(ImageMessage(imageName:"field.png"))
+        renderMessages([TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field"), TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field")])
+        println(messagesScrollview)
         // Do any additional setup after loading the view.
     }
+    func renderMessages(messages:[MessageBody]){
+        var yStart:CGFloat = 10
+        for message in messages{
+            if(message.type == "Text"){
+                yStart += renderText(message as TextMessage, start: yStart)
+            }
+            else if(message.type == "Image"){
+                println(yStart)
+                yStart += renderImage(message as ImageMessage, start: yStart)
+                println(yStart)
+            }
+            messagesScrollview.contentSize = CGSize(width:UIScreen.mainScreen().bounds.width, height: yStart)
+        }
+    }
+    
     // Renders a TextMessage
-    func renderTextMessage(message:TextMessage) -> CGFloat{
+    func renderText(message:TextMessage, start:CGFloat) -> CGFloat{
         var xSideBuffer:CGFloat = 10
         var textView = UITextView()
         var rectWidth:CGFloat = UIScreen.mainScreen().bounds.width - xSideBuffer*2
@@ -28,20 +43,20 @@ class MessagesViewController: UIViewController {
         textView.editable = false
         textView.selectable = false
         textView.scrollEnabled = false
-        textView.frame = CGRect(origin:CGPoint(x:xSideBuffer, y:100), size:CGSize(width:rectWidth, height:100))
-        self.view.addSubview(textView)
-        return textView.frame.width
+        textView.frame = CGRect(origin:CGPoint(x:xSideBuffer, y:start), size:CGSize(width:rectWidth, height:30))
+        messagesScrollview.addSubview(textView)
+        return textView.frame.height
     }
     
-    func renderImageMessage(message:ImageMessage) -> CGFloat{
-        var imageObj = UIImage(contentsOfFile: message.path)
+    func renderImage(message:ImageMessage, start:CGFloat) -> CGFloat{
+        var imageObj = UIImage(named: message.path)
         var xSideBuffer:CGFloat = 10
         var rectWidth:CGFloat = UIScreen.mainScreen().bounds.width - xSideBuffer*2
         var height:CGFloat = imageObj!.size.height*rectWidth/imageObj!.size.width
         var imageView = UIImageView(image:imageObj)
-        imageView.frame = CGRect(origin:CGPoint(x:xSideBuffer, y:100), size:CGSize(width:rectWidth, height:height))
-        self.view.addSubview(imageView)
-        return CGFloat(4)
+        imageView.frame = CGRect(origin:CGPoint(x:xSideBuffer, y:start), size:CGSize(width:rectWidth, height:height))
+        messagesScrollview.addSubview(imageView)
+        return height
     }
 
     override func didReceiveMemoryWarning() {

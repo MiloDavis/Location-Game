@@ -2,23 +2,26 @@ import UIKit
 
 // Creates a message
 protocol MessageBody{
-    
+    var type:String{ get set }
 }
 // Message made up only of a String
 class TextMessage:MessageBody{
     var text:String
+    var type = "Text"
     init(text:String){
         self.text = text
     }
 }
 class ImageMessage:MessageBody{
     var path:String
+    var type = "Image"
     init(imageName:String){
-        self.path = "/Users/alicedavis/Documents/IOS Dev/Location-Game/LocationPuzzleGame/Mission/imageMessages/" + imageName
+        self.path =  imageName
+        //"/Users/alicedavis/Documents/IOS Dev/Location-Game/LocationPuzzleGame/Mission/imageMessages/"
     }
 }
 class SilentMessage:MessageBody{
-    
+    var type = "Silent"
 }
 
 // Message defined based

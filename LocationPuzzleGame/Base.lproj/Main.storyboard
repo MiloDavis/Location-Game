@@ -43,21 +43,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm7-G4-tdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OTL-zC-Fae" customClass="MessagesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OyG-k5-VrH"/>
-                        <viewControllerLayoutGuide type="bottom" id="apB-8U-5t1"/>
+                        <viewControllerLayoutGuide type="top" id="GvR-dN-R0t"/>
+                        <viewControllerLayoutGuide type="bottom" id="m1b-WX-xUk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gqL-Jo-FpH">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5zz-XE-gVu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ag0-GN-w36">
-                                <rect key="frame" x="0.0" y="5" width="320" height="568"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </scrollView>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="messagesScrollview" destination="5zz-XE-gVu" id="5Sw-jA-dxG"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2295" y="-1166"/>
