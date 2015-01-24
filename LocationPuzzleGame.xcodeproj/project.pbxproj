@@ -86,6 +86,7 @@
 			children = (
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
 				70B159281A734BEB00F29535 /* ViewController.swift */,
+				E46547941A7370DA006E2D63 /* messages.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
 				70B1592D1A734BEB00F29535 /* Images.xcassets */,
 				70B1592F1A734BEB00F29535 /* LaunchScreen.xib */,
@@ -233,6 +234,7 @@
 			files = (
 				70B1594A1A736D1500F29535 /* Puzzle.swift in Sources */,
 				70B159291A734BEB00F29535 /* ViewController.swift in Sources */,
+				E46547951A7370DA006E2D63 /* messages.swift in Sources */,
 				70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */,
 				70B159471A736C4100F29535 /* Mission.swift in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
@@ -427,6 +429,7 @@
 				70B159421A734BEB00F29535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70B159431A734BEB00F29535 /* Build configuration list for PBXNativeTarget "LocationPuzzleGameTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +438,7 @@
 				70B159451A734BEB00F29535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
