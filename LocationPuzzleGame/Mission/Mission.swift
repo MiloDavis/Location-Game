@@ -6,32 +6,20 @@
 //  Copyright (c) 2015 Jack Frysinger. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-// Represents a Message to the user
-protocol PMessage{
-    func deliver()
+import Foundation
+
+class Mission {
+    var puzzles: [Puzzle]
+    var puzzleIndex: Int
     
-}
-// Message defined based
-class Message: PMessage{
-    var viewed = false
-    var delivered = false
-    //var timerStart
-    init(){
-        
-        
+    init(puzzles: [Puzzle], puzzleIndex: Int) {
+        self.puzzles = puzzles;
+        self.puzzleIndex = puzzleIndex
     }
-    func deliver(){
-        //mission.unreadMessages += 1
-        
+    
+    func resume() -> Puzzle {
+        return self.puzzles[puzzleIndex]
     }
-    func atLocation(){
-        
-    }
-}
-
-func messageTest(){
-    var message = Message()
-    message.deliver()
 }
