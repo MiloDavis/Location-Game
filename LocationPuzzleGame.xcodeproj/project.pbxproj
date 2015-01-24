@@ -16,6 +16,7 @@
 		70B1593D1A734BEB00F29535 /* LocationPuzzleGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1593C1A734BEB00F29535 /* LocationPuzzleGameTests.swift */; };
 		70B159471A736C4100F29535 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159461A736C4100F29535 /* Mission.swift */; };
 		70B1594A1A736D1500F29535 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159491A736D1500F29535 /* Puzzle.swift */; };
+		70B1594D1A73832400F29535 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594C1A73832400F29535 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		70B159461A736C4100F29535 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mission.swift; path = Mission/Mission.swift; sourceTree = "<group>"; };
 		70B159491A736D1500F29535 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Puzzle.swift; path = Mission/Puzzle.swift; sourceTree = "<group>"; };
 		70B1594B1A7372DD00F29535 /* Mission_trial.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Mission_trial.playground; sourceTree = "<group>"; };
+		70B1594C1A73832400F29535 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Mission/Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,6 @@
 			children = (
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
 				70B159281A734BEB00F29535 /* ViewController.swift */,
-				E46547941A7370DA006E2D63 /* messages.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
 				70B1592D1A734BEB00F29535 /* Images.xcassets */,
 				70B1592F1A734BEB00F29535 /* LaunchScreen.xib */,
@@ -125,6 +126,7 @@
 		70B159481A736C4800F29535 /* Mission */ = {
 			isa = PBXGroup;
 			children = (
+				70B1594C1A73832400F29535 /* Message.swift */,
 				70B159461A736C4100F29535 /* Mission.swift */,
 				70B159491A736D1500F29535 /* Puzzle.swift */,
 				70B1594B1A7372DD00F29535 /* Mission_trial.playground */,
@@ -234,8 +236,8 @@
 			files = (
 				70B1594A1A736D1500F29535 /* Puzzle.swift in Sources */,
 				70B159291A734BEB00F29535 /* ViewController.swift in Sources */,
-				E46547951A7370DA006E2D63 /* messages.swift in Sources */,
 				70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */,
+				70B1594D1A73832400F29535 /* Message.swift in Sources */,
 				70B159471A736C4100F29535 /* Mission.swift in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
 			);
