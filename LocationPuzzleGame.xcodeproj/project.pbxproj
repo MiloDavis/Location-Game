@@ -13,10 +13,8 @@
 		70B1592E1A734BEB00F29535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592D1A734BEB00F29535 /* Images.xcassets */; };
 		70B159311A734BEB00F29535 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592F1A734BEB00F29535 /* LaunchScreen.xib */; };
 		70B1593D1A734BEB00F29535 /* LocationPuzzleGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1593C1A734BEB00F29535 /* LocationPuzzleGameTests.swift */; };
-		70B159471A736C4100F29535 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159461A736C4100F29535 /* Mission.swift */; };
 		70B1594A1A736D1500F29535 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159491A736D1500F29535 /* Puzzle.swift */; };
 		70B1594D1A73832400F29535 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594C1A73832400F29535 /* Message.swift */; };
-		70B1594F1A738BA100F29535 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594E1A738BA100F29535 /* Hint.swift */; };
 		70B159551A73985300F29535 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159541A73985300F29535 /* MessagesViewController.swift */; };
 		E46547A41A73B7B1006E2D63 /* scouting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46547A21A73B7B1006E2D63 /* scouting.jpg */; };
 /* End PBXBuildFile section */
@@ -42,10 +40,8 @@
 		70B159361A734BEB00F29535 /* LocationPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B1593B1A734BEB00F29535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B1593C1A734BEB00F29535 /* LocationPuzzleGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPuzzleGameTests.swift; sourceTree = "<group>"; };
-		70B159461A736C4100F29535 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mission.swift; path = Mission/Mission.swift; sourceTree = "<group>"; };
 		70B159491A736D1500F29535 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Puzzle.swift; path = Mission/Puzzle.swift; sourceTree = "<group>"; };
 		70B1594C1A73832400F29535 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Mission/Message.swift; sourceTree = "<group>"; };
-		70B1594E1A738BA100F29535 /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		70B159541A73985300F29535 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ViewController/MessagesViewController.swift; sourceTree = "<group>"; };
 		E46547A21A73B7B1006E2D63 /* scouting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scouting.jpg; path = Mission/imageMessages/scouting.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,11 +87,11 @@
 			children = (
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
+				70EB8DB11A73D08300ED47CA /* World.swift */,
 				70B159531A73978100F29535 /* ViewController */,
 				70B1592D1A734BEB00F29535 /* Images.xcassets */,
 				70B1592F1A734BEB00F29535 /* LaunchScreen.xib */,
 				70B159251A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld */,
-				70B159501A738CBF00F29535 /* Other model */,
 				70B159211A734BEB00F29535 /* Supporting Files */,
 				70B159481A736C4800F29535 /* Mission */,
 			);
@@ -131,23 +127,15 @@
 			isa = PBXGroup;
 			children = (
 				70B1594C1A73832400F29535 /* Message.swift */,
-				70B159461A736C4100F29535 /* Mission.swift */,
 				70B159491A736D1500F29535 /* Puzzle.swift */,
 			);
 			name = Mission;
 			sourceTree = "<group>";
 		};
-		70B159501A738CBF00F29535 /* Other model */ = {
-			isa = PBXGroup;
-			children = (
-				70B1594E1A738BA100F29535 /* Hint.swift */,
-			);
-			name = "Other model";
-			sourceTree = "<group>";
-		};
 		70B159531A73978100F29535 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				70EB8DB31A73DA3700ED47CA /* PuzzleSolvingViewController.swift */,
 				70B159541A73985300F29535 /* MessagesViewController.swift */,
 				E46547A21A73B7B1006E2D63 /* scouting.jpg */,
 			);
@@ -259,8 +247,8 @@
 				70B159551A73985300F29535 /* MessagesViewController.swift in Sources */,
 				70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */,
 				70B1594D1A73832400F29535 /* Message.swift in Sources */,
-				70B1594F1A738BA100F29535 /* Hint.swift in Sources */,
-				70B159471A736C4100F29535 /* Mission.swift in Sources */,
+				70EB8DB41A73DA3700ED47CA /* PuzzleSolvingViewController.swift in Sources */,
+				70EB8DB21A73D08300ED47CA /* World.swift in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

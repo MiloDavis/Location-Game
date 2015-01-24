@@ -25,6 +25,15 @@
                                     <segue destination="OTL-zC-Fae" kind="show" id="ylL-sr-GS5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOK-e7-L5N">
+                                <rect key="frame" x="116" y="212" width="88" height="30"/>
+                                <state key="normal" title="Solve Puzzle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wYN-hL-WaW" kind="show" id="rPU-zh-TX8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
