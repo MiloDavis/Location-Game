@@ -18,6 +18,7 @@
 		70B1594F1A738BA100F29535 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594E1A738BA100F29535 /* Hint.swift */; };
 		70B159551A73985300F29535 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159541A73985300F29535 /* MessagesViewController.swift */; };
 		70EB8DB21A73D08300ED47CA /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB8DB11A73D08300ED47CA /* World.swift */; };
+		70EB8DB41A73DA3700ED47CA /* PuzzleSolvingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB8DB31A73DA3700ED47CA /* PuzzleSolvingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		70B1594E1A738BA100F29535 /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		70B159541A73985300F29535 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ViewController/MessagesViewController.swift; sourceTree = "<group>"; };
 		70EB8DB11A73D08300ED47CA /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		70EB8DB31A73DA3700ED47CA /* PuzzleSolvingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PuzzleSolvingViewController.swift; path = ViewController/PuzzleSolvingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		70B159531A73978100F29535 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				70EB8DB31A73DA3700ED47CA /* PuzzleSolvingViewController.swift */,
 				70B159541A73985300F29535 /* MessagesViewController.swift */,
 			);
 			name = ViewController;
@@ -256,6 +259,7 @@
 				70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */,
 				70B1594D1A73832400F29535 /* Message.swift in Sources */,
 				70B1594F1A738BA100F29535 /* Hint.swift in Sources */,
+				70EB8DB41A73DA3700ED47CA /* PuzzleSolvingViewController.swift in Sources */,
 				70EB8DB21A73D08300ED47CA /* World.swift in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
 			);
