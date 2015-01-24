@@ -68,7 +68,7 @@ class MessagesViewController: UIViewController {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    /*func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.world.recievedMessages.count
     }
     
@@ -83,7 +83,7 @@ class MessagesViewController: UIViewController {
         
         return cell
     }
-
+*/
 
     /*
     // MARK: - Navigation
