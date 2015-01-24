@@ -9,5 +9,17 @@
 import UIKit
 
 class PuzzleSolvingViewController: UIViewController {
-
+    
+    var world = World.sharedInstance
+    
+    @IBOutlet var hintTextView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let hints = world.hints
+        
+        for hint in hints {
+            self.hintTextView.text! += "\n \(hint)"
+        }
+    }
 }

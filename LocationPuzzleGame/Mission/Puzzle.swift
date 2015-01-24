@@ -12,7 +12,7 @@ import CoreLocation
 class Puzzle {
     var items: [PuzzleItem]
     var location: CLLocationCoordinate2D
-    var hints: [Hint] = []
+    var hints: [Hint]
     
     init(items: [PuzzleItem], location: CLLocationCoordinate2D, hints: [Hint]) {
         self.items = items

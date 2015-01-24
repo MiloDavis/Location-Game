@@ -92,6 +92,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="hintTextView" destination="imD-ER-QH8" id="nlc-uB-CrX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0U-Sv-cj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

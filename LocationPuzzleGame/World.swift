@@ -28,6 +28,7 @@ class World {
     var currentPuzzle: Puzzle? = nil
     var recievedMessages: [Message] = []
     var unreadMessages: Int = 0
+    var hints: [Hint] = []
     
     init() {
         
@@ -44,6 +45,7 @@ class World {
     
     func nextPuzzle() {
         self.currentPuzzle = self.puzzles[self.currentPuzzleIndex]
+        self.hints = self.currentPuzzle!.hints
         self.currentPuzzleIndex++
     }
     
