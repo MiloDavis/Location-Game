@@ -28,7 +28,7 @@ class World {
     var currentPuzzle: Puzzle? = nil
     var recievedMessages: [Message] = []
     var unreadMessages: Int = 0
-    var hints: [Hint] = []
+    var hints: [Hint] = [Hint(images: [nil], text: "Hello")]
     
     init() {
         

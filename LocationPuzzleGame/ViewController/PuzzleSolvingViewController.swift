@@ -19,7 +19,9 @@ class PuzzleSolvingViewController: UIViewController {
         let hints = world.hints
         
         for hint in hints {
-            self.hintTextView.text! += "\n \(hint)"
+            for textItem in hint.text {
+                self.hintTextView.text! += "\n \(textItem)"
+            }
         }
     }
 }

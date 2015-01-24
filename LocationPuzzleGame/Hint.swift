@@ -9,10 +9,10 @@
 import Foundation
 
 class Hint {
-    var images: [String]
+    var images: [String?]
     var text: String
     
-    init(images: [String], text: String) {
+    init(images: [String?], text: String) {
         self.images = images
         self.text = text
     }
