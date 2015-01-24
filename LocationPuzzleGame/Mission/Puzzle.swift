@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Puzzle {
     var items: [PuzzleItem]
+    var location: CLLocationCoordinate2D
     
-    init(items: [PuzzleItem]) {
+    init(items: [PuzzleItem], location: CLLocationCoordinate2D) {
         self.items = items
+        self.location = location
     }
 }
 

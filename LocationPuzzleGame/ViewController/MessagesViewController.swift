@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MessagesViewController: UIViewController {
+class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var world = World.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,26 @@ class MessagesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.world.recievedMessages.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("label") as? UITableViewCell
+        if (cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Component")
+        }
+        //var content: String! = self.world.recievedMessages[indexPath.row].subject
+        cell.textLabel?.text = nil
+        
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation
