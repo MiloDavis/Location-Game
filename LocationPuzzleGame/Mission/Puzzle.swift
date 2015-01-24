@@ -29,9 +29,9 @@ class TextPuzzleItem: PuzzleItem {
 }
 
 class ImagePuzzleItem: PuzzleItem {
-    var url: NSURL
+    var name: String
     
-    init(imageName: String) {
-        self.url = NSURL(string: "http://ccs.neu.edu/home/jcf0810/" + imageName)!
+    init(name: String) {
+        self.name = name
     }
 }
