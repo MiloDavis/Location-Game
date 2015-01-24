@@ -39,10 +39,12 @@ class SilentMessage:MessageBody{
 class Message{
     var viewed = false
     var delivered = false
+    var calling = [String]()// Messages the message will start
     var body: MessageBody
     //var timerStart
-    init(body:MessageBody){
+    init(body:MessageBody, calling:[String]){
         self.body = body
+        self.calling = calling
         
     }
     func deliver(){
@@ -51,11 +53,14 @@ class Message{
     func atLocation(){
         
     }
+    func start(){
+        
+    }
 }
 
 
 func messageTest(){
-    var message = Message(body: TextMessage(text:"asdfasdfasdfasdf"))
+    var message = Message(body: TextMessage(text:"asdfasdfasdfasdf"), calling:[String]())
     message.deliver()
 }
 
