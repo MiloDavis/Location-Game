@@ -1,13 +1,6 @@
-//
-//  CoreLocationController.swift
-//  LocationPuzzleGame
-//
-//  Created by Charlie Peters on 1/24/15.
-//  Copyright (c) 2015 Jack Frysinger. All rights reserved.
-//
-
 import Foundation
 import CoreLocation
+import UIKit
 
 class CoreLocationController : NSObject, CLLocationManagerDelegate {
     
@@ -47,6 +40,14 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
-        World.sharedInstance.nextPuzzle()
+        
+        var alert = UIAlertView()
+        alert.title = "New Secure Communication:"
+        alert.message = "You have arrived"
+        alert.addButtonWithTitle("Later")
+        alert.addButtonWithTitle("View")
+        alert.show()
+        
+        //World.sharedInstance.nextPuzzle()
     }
 }
