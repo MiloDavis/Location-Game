@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159231A734BEB00F29535 /* AppDelegate.swift */; };
 		70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70B159251A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld */; };
-		70B159291A734BEB00F29535 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159281A734BEB00F29535 /* ViewController.swift */; };
 		70B1592C1A734BEB00F29535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592A1A734BEB00F29535 /* Main.storyboard */; };
 		70B1592E1A734BEB00F29535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592D1A734BEB00F29535 /* Images.xcassets */; };
 		70B159311A734BEB00F29535 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592F1A734BEB00F29535 /* LaunchScreen.xib */; };
@@ -18,6 +17,7 @@
 		70B1594A1A736D1500F29535 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159491A736D1500F29535 /* Puzzle.swift */; };
 		70B1594D1A73832400F29535 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594C1A73832400F29535 /* Message.swift */; };
 		70B1594F1A738BA100F29535 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1594E1A738BA100F29535 /* Hint.swift */; };
+		70B159551A73985300F29535 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159541A73985300F29535 /* MessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 		70B159221A734BEB00F29535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B159231A734BEB00F29535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70B159261A734BEB00F29535 /* LocationPuzzleGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationPuzzleGame.xcdatamodel; sourceTree = "<group>"; };
-		70B159281A734BEB00F29535 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70B1592B1A734BEB00F29535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70B1592D1A734BEB00F29535 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		70B159301A734BEB00F29535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		70B159491A736D1500F29535 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Puzzle.swift; path = Mission/Puzzle.swift; sourceTree = "<group>"; };
 		70B1594C1A73832400F29535 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Mission/Message.swift; sourceTree = "<group>"; };
 		70B1594E1A738BA100F29535 /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		70B159541A73985300F29535 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ViewController/MessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
-				70B159281A734BEB00F29535 /* ViewController.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
+				70B159531A73978100F29535 /* ViewController */,
 				70B1592D1A734BEB00F29535 /* Images.xcassets */,
 				70B1592F1A734BEB00F29535 /* LaunchScreen.xib */,
 				70B159251A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld */,
@@ -141,6 +141,14 @@
 				70B1594E1A738BA100F29535 /* Hint.swift */,
 			);
 			name = "Other model";
+			sourceTree = "<group>";
+		};
+		70B159531A73978100F29535 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				70B159541A73985300F29535 /* MessagesViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B1594A1A736D1500F29535 /* Puzzle.swift in Sources */,
-				70B159291A734BEB00F29535 /* ViewController.swift in Sources */,
+				70B159551A73985300F29535 /* MessagesViewController.swift in Sources */,
 				70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */,
 				70B1594D1A73832400F29535 /* Message.swift in Sources */,
 				70B1594F1A738BA100F29535 /* Hint.swift in Sources */,
