@@ -14,6 +14,7 @@
 		70B1592E1A734BEB00F29535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592D1A734BEB00F29535 /* Images.xcassets */; };
 		70B159311A734BEB00F29535 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592F1A734BEB00F29535 /* LaunchScreen.xib */; };
 		70B1593D1A734BEB00F29535 /* LocationPuzzleGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1593C1A734BEB00F29535 /* LocationPuzzleGameTests.swift */; };
+		E46547951A7370DA006E2D63 /* messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46547941A7370DA006E2D63 /* messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		70B159361A734BEB00F29535 /* LocationPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B1593B1A734BEB00F29535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B1593C1A734BEB00F29535 /* LocationPuzzleGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPuzzleGameTests.swift; sourceTree = "<group>"; };
+		E46547941A7370DA006E2D63 /* messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messages.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
 				70B159281A734BEB00F29535 /* ViewController.swift */,
+				E46547941A7370DA006E2D63 /* messages.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
 				70B1592D1A734BEB00F29535 /* Images.xcassets */,
 				70B1592F1A734BEB00F29535 /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B159291A734BEB00F29535 /* ViewController.swift in Sources */,
+				E46547951A7370DA006E2D63 /* messages.swift in Sources */,
 				70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				70B159421A734BEB00F29535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70B159431A734BEB00F29535 /* Build configuration list for PBXNativeTarget "LocationPuzzleGameTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				70B159451A734BEB00F29535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
