@@ -56,8 +56,20 @@ class MessagesViewController: UIViewController {
         textView.editable = false
         textView.selectable = false
         textView.scrollEnabled = false
-        textView.frame = CGRect(origin:CGPoint(x:xSideBuffer, y:start), size:CGSize(width:rectWidth, height:30))
+        
+        textView.sizeToFit()
+        textView.layoutIfNeeded()
+        
+        
+        
+        var frameSize:CGSize = CGSize(width:rectWidth, height: 300)
+        var frame = CGRect(origin:CGPoint(x:xSideBuffer, y:start), size: frameSize)
+        textView.frame = frame
         messagesScrollview.addSubview(textView)
+        textView.sizeToFit()
+        textView.layoutIfNeeded()
+        textView.frame.size.height = textView.contentSize.height
+        
         return textView.frame.height
     }
     
