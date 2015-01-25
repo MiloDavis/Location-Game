@@ -15,7 +15,7 @@ class World {
         return Static.instance!
     }
 
-    var puzzles : [Puzzle] = [initPuzzle()]
+    var puzzles : [Puzzle] = initPuzzle()
     var currentPuzzleIndex: Int = 1
     var currentPuzzle: Puzzle
     var recievedMessages: [Message] = []
@@ -23,7 +23,7 @@ class World {
     var messageSenders: [MessageSender] = [MessageSender(name:"Jefferson", imageName:"qm"), MessageSender(name:"Washington", imageName:"guyFawkes")]
     
     init() {
-        self.currentPuzzle = initPuzzle()
+        self.currentPuzzle = puzzles[0]
     }
     
     func resume() -> Puzzle {
@@ -46,14 +46,9 @@ class World {
     
 }
 
-func initPuzzle() -> Puzzle {
-    var loc = CLLocationCoordinate2D(latitude: 42.336751, longitude: -71.0911301)
-    var mes1:Message = Message(body:TextMessage(text: "Test message is here."), id: "m1")
-    mes1.delivered = true;
-    var mes2:Message = Message(body: TextMessage(text: "asdfasdfa sdf asdfa dsa as dfas;dlkfjas;ldk jfa;sldkjfas;ldkfja;slkdj fa;sldkj;aslkdj ;adslk jda;lk jds;lkaj l;ksjd ;alksjdf ;laksjd f;laksjd f;laksjdf ;lakjsd;fl kjas;dlk jas;l dkjal;sdkjf a;lsdkjf;alskdjf;alskjdf"), id:"m2")
-    mes2.delivered = true
-    var mArray:[Message] = [mes1, mes2]
-    var p : Puzzle = Puzzle(location: loc, messages: mArray, triggers: [Trigger]())
-    return p
+func initPuzzle() -> [Puzzle] {
+    let c = Content()
+    var puzzles = [c.p0, c.p1, c.p2, c.p3, c.p4, c.p5, c.p6]
+    return puzzles
 }
 
