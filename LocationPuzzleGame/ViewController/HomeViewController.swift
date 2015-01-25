@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var loc = SharedLocation.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
