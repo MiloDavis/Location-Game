@@ -14,23 +14,32 @@ class MessagesViewController: UIViewController {
     var loc = SharedLocation.sharedInstance
     
     @IBOutlet var messagesScrollview: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        renderMessages([TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field"), TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field")])
-
+        renderMessages()
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
     }
-    func renderMessages(messages:[MessageBody]){
-        var yStart:CGFloat = 10
+    func renderMessages(){
+        var w = World.sharedInstance
+        var messages = [Message]()
+        for (var i=0; i<w.currentPuzzleIndex; i++){
+            messages += w.puzzles[i].messages
+        }
+        messages = messages.reverse()
+        var yStart:CGFloat = 30
         for message in messages{
-            if(message.type == "Text"){
-                yStart += renderText(message as TextMessage, start: yStart)
+            if(!message.delivered){
+                continue;
             }
-            else if(message.type == "Image"){
-                yStart += renderImage(message as ImageMessage, start: yStart)
+            if(message.body.type == "Text"){
+                yStart += renderText(message.body as TextMessage, start: yStart)
+            }
+            else if(message.body.type == "Image"){
+                yStart += renderImage(message.body as ImageMessage, start: yStart)
             }
             messagesScrollview.contentSize = CGSize(width:UIScreen.mainScreen().bounds.width, height: yStart)
         }

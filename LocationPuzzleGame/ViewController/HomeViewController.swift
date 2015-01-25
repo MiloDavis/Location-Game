@@ -10,10 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var loc = SharedLocation.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
 
         // Do any additional setup after loading the view.

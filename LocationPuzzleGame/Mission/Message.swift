@@ -1,4 +1,5 @@
 import UIKit
+import AudioToolbox
 
 // Creates a message
 protocol MessageBody{
@@ -40,28 +41,22 @@ class MessageSender{
 class Message {
     var viewed = false
     var delivered = false
-    var calling = [String]()// Messages the message will start
     var body: MessageBody
-    var id:String
+    var id: String
     //var from: String
     //var timerStart
-    init(body:MessageBody, id:String, calling:[String]/*, from:String*/){
+    init(body:MessageBody, id:String/*, from:String*/){
         self.body = body
         self.id = id
-        self.calling = calling
+        self.delivered = false
         //self.from = from
         
     }
     func deliver(){
         self.alert()
         var w = World.sharedInstance
-        w.unreadMessages += 1
         var messages = w.puzzles[w.currentPuzzleIndex].messages
-        for call in calling {
-            for m in messages {
-                m.start()
-            }
-        }
+        self.delivered = true
     }
     
     func alert(){
@@ -69,12 +64,15 @@ class Message {
             
         }
         else if(self.body.type == "Text"){
-            var alert = UIAlertView()
+            /*var alert = UIAlertView()
             alert.title = "New Secure Communication:"
             alert.message = self.body.text
             alert.addButtonWithTitle("Later")
             alert.addButtonWithTitle("View")
-            alert.show()
+            alert.show()*/
+            
+            /*var rootViewController = AppDelegate().window!.rootViewController*/
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
         }
         
@@ -89,20 +87,28 @@ class Message {
 }
 
 func messageTest(){
-    var trig = TimeTrigger(messageID:"m1", delay:5)
+    var trig = TimeTrigger(id: "m1", messageID:"m1", delay:5, calling:"")
 }
 protocol Trigger {
-    
+    func start()
+    func trigger()
+    var id: String {get set}
 }
 class TimeTrigger: Trigger {
+    var id: String
     var delay:Double
     var timeout: Timeout? = nil
     var messageID: String
-    init(messageID: String, delay: Double){
+    var calling: String
+    init(id: String, messageID: String, delay: Double, calling: String){
         self.messageID = messageID
         self.delay = delay
+        self.calling = calling
+        self.id = id
+    }
+    
+    func start(){
         self.timeout = Timeout(callback: self.trigger, delay: delay)
-        
         // Local notification of event
         var localNotification:UILocalNotification = UILocalNotification()
         localNotification.alertAction = "Testing notifications on iOS8"
@@ -119,6 +125,15 @@ class TimeTrigger: Trigger {
         for m in messages{
             if(m.id == messageID){
                 m.deliver()
+                break;
+            }
+        }
+        if(self.calling != ""){
+            w = World.sharedInstance
+            for t in w.puzzles[w.currentPuzzleIndex].triggers{
+                if(self.calling == t.id){
+                    t.start()
+                }
             }
         }
     }
