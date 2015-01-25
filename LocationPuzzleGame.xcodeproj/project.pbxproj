@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563780241A754D22005256D8 /* SharedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563780231A754D22005256D8 /* SharedLocation.swift */; };
 		568E928E1A74555500091BED /* PuzzlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E928D1A74555500091BED /* PuzzlesViewController.swift */; };
 		70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159231A734BEB00F29535 /* AppDelegate.swift */; };
 		70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70B159251A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		563780231A754D22005256D8 /* SharedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedLocation.swift; sourceTree = "<group>"; };
 		568E928D1A74555500091BED /* PuzzlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzlesViewController.swift; sourceTree = "<group>"; };
 		70B1591E1A734BEB00F29535 /* LocationPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B159221A734BEB00F29535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				E4AFCFD01A74064400EDC973 /* Solution.swift */,
 				E4AFCFD21A74066900EDC973 /* CoreLocationController.swift */,
 				E4AFCFD41A7406E000EDC973 /* World.swift */,
+				563780231A754D22005256D8 /* SharedLocation.swift */,
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
 				70B159531A73978100F29535 /* ViewController */,
@@ -270,6 +273,7 @@
 				E4AFCFD31A74066900EDC973 /* CoreLocationController.swift in Sources */,
 				70B1594D1A73832400F29535 /* Message.swift in Sources */,
 				E4AFCFD51A7406E000EDC973 /* World.swift in Sources */,
+				563780241A754D22005256D8 /* SharedLocation.swift in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
