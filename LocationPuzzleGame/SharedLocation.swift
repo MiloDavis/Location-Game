@@ -78,6 +78,8 @@ class SharedLocation: NSObject, CLLocationManagerDelegate {
         alert.addButtonWithTitle("Later")
         alert.addButtonWithTitle("View")
         alert.show()
+        
+        World.sharedInstance.nextPuzzle()
     }
     
 }
