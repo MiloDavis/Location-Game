@@ -2,7 +2,7 @@ import Foundation
 import CoreLocation
 import UIKit
 
-class CoreLocationController : NSObject, CLLocationManagerDelegate {
+/*class CoreLocationController : NSObject, CLLocationManagerDelegate {
     
     var locationManager:CLLocationManager = CLLocationManager()
     
@@ -11,6 +11,7 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.distanceFilter  = 100
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+
         self.locationManager.requestAlwaysAuthorization()
         
     }
@@ -50,4 +51,4 @@ class CoreLocationController : NSObject, CLLocationManagerDelegate {
         
         //World.sharedInstance.nextPuzzle()
     }
-}
+}*/

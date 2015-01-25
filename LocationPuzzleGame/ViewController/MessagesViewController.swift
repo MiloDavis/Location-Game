@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MessagesViewController: UIViewController {
+    
+    var loc = CoreLocationController()
     
     @IBOutlet var messagesScrollview: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         renderMessages([TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field"), TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field")])
+
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
     }
     func renderMessages(messages:[MessageBody]){
         var yStart:CGFloat = 10
@@ -65,31 +72,55 @@ class MessagesViewController: UIViewController {
         return 1
     }
     
-    /*func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.world.recievedMessages.count
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("label") as? UITableViewCell
-        if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Component")
-        }
-        //var content: String! = self.world.recievedMessages[indexPath.row].subject
-        cell.textLabel?.text = nil
+    class CoreLocationController : NSObject, CLLocationManagerDelegate {
         
-        return cell
+        var locationManager:CLLocationManager = CLLocationManager()
+        
+        override init() {
+            super.init()
+            self.locationManager.delegate = self
+            self.locationManager.distanceFilter  = 100
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            
+            self.locationManager.requestAlwaysAuthorization()
+            
+        }
+        
+        func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+            println("didChangeAuthorizationStatus")
+            
+            switch status {
+            case .NotDetermined:
+                println(".NotDetermined")
+                break
+                
+            case .Authorized:
+                println(".Authorized")
+                self.locationManager.startMonitoringForRegion(World.sharedInstance.getAnswerRegion())
+                break
+                
+            case .Denied:
+                println(".Denied")
+                break
+                
+            default:
+                println("Unhandled authorization status")
+                break
+                
+            }
+        }
+        
+        func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+            
+            var alert = UIAlertView()
+            alert.title = "New Secure Communication:"
+            alert.message = "You have arrived"
+            alert.addButtonWithTitle("Later")
+            alert.addButtonWithTitle("View")
+            alert.show()
+            
+            //World.sharedInstance.nextPuzzle()
+        }
     }
-*/
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

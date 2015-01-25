@@ -42,13 +42,13 @@ class World {
     }
     
     func getAnswerRegion() -> CLRegion {
-        return CLCircularRegion(center: self.currentPuzzle!.location, radius: 30.0, identifier: "location")
+        return CLCircularRegion(center:CLLocationCoordinate2D(latitude: 42.336751, longitude: -71.0911301), radius:20, identifier:"location") //CLCircularRegion(center: self.currentPuzzle!.location, radius: 30.0, identifier: "location")
     }
     
 }
 
 func initPuzzle() -> Puzzle{
-    var loc = CLLocationCoordinate2D(latitude: 80.0, longitude: 80.0)
+    var loc = CLLocationCoordinate2D(latitude: 42.336751, longitude: -71.0911301)
     var mes:[Message] = [Message(body:TextMessage(text: "Test message is here."), id: "m1", calling: [""])]
     var hint:[Message] = [Message(body: TextMessage(text: "asdfasdfasdf"), id:"m1", calling:[String]())]
     var p : Puzzle = Puzzle(location: loc, messages: mes, hints: hint)
