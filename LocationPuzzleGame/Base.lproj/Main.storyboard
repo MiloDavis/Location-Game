@@ -4,67 +4,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Home-->
-        <scene sceneID="HBP-eh-r7H">
-            <objects>
-                <viewController id="noG-Li-XTL" customClass="HomeViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d0c-SQ-p3a"/>
-                        <viewControllerLayoutGuide type="bottom" id="ySn-AV-phi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nm3-CO-2DF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afq-rG-TcL">
-                                <rect key="frame" x="104" y="123" width="112" height="30"/>
-                                <state key="normal" title="Go to messages">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OTL-zC-Fae" kind="show" id="q8e-wu-R9a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOK-e7-L5N">
-                                <rect key="frame" x="112" y="211" width="97" height="30"/>
-                                <state key="normal" title="Solve Puzzles">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="HIk-SX-FU1" kind="show" id="JhK-2n-w4R"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="TOK-e7-L5N" firstAttribute="top" secondItem="Afq-rG-TcL" secondAttribute="bottom" constant="60" id="1ex-eG-ZA2"/>
-                            <constraint firstItem="Afq-rG-TcL" firstAttribute="top" secondItem="d0c-SQ-p3a" secondAttribute="bottom" constant="59" id="ELG-hI-fSa"/>
-                            <constraint firstItem="TOK-e7-L5N" firstAttribute="centerX" secondItem="nm3-CO-2DF" secondAttribute="centerX" id="Fch-hm-BmI"/>
-                            <constraint firstItem="TOK-e7-L5N" firstAttribute="centerX" secondItem="Afq-rG-TcL" secondAttribute="centerX" id="Xdz-Ai-eJq"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Home" id="y5k-4i-Pbf"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vPo-xw-Jac" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1782" y="-868"/>
-        </scene>
         <!--Messages View Controller-->
         <scene sceneID="s3d-Ic-a5K">
             <objects>
-                <viewController id="OTL-zC-Fae" customClass="MessagesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessagesViewController" id="OTL-zC-Fae" customClass="MessagesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GvR-dN-R0t"/>
                         <viewControllerLayoutGuide type="bottom" id="m1b-WX-xUk"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5zz-XE-gVu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" id="5zz-XE-gVu">
+                        <rect key="frame" x="0.0" y="44" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </scrollView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="messagesScrollview" destination="5zz-XE-gVu" id="5Sw-jA-dxG"/>
@@ -72,47 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm7-G4-tdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207" y="-1352"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Yna-1w-OIx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ama-9A-gL5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVi-Yw-VzY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="noG-Li-XTL" kind="relationship" relationship="rootViewController" id="Iuq-1h-vgA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HJC-1g-izF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="942" y="-906"/>
-        </scene>
-        <!--Puzzles View Controller-->
-        <scene sceneID="Pdv-er-CZV">
-            <objects>
-                <viewController id="HIk-SX-FU1" userLabel="Puzzles View Controller" customClass="PuzzlesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5Ai-BZ-seo"/>
-                        <viewControllerLayoutGuide type="bottom" id="HZT-77-8AU"/>
-                    </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qaD-AR-bOd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </scrollView>
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="puzzlesScrollView" destination="qaD-AR-bOd" id="SE2-YS-iAt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rQX-DS-LaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2201" y="-722"/>
+            <point key="canvasLocation" x="1741" y="-912"/>
         </scene>
     </scenes>
 </document>

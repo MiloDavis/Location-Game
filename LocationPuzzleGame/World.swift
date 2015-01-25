@@ -16,12 +16,11 @@ class World {
     }
 
     var puzzles : [Puzzle] = [initPuzzle()]
-    var currentPuzzleIndex: Int = 0
+    var currentPuzzleIndex: Int = 1
     var currentPuzzle: Puzzle? = nil
     var recievedMessages: [Message] = []
     var unreadMessages: Int = 0
     var messageSenders: [MessageSender] = [MessageSender(name:"Jefferson", imageName:"qm"), MessageSender(name:"Washington", imageName:"guyFawkes")]
-    
     
     init() {
         
@@ -49,9 +48,12 @@ class World {
 
 func initPuzzle() -> Puzzle{
     var loc = CLLocationCoordinate2D(latitude: 42.336751, longitude: -71.0911301)
-    var mes:[Message] = [Message(body:TextMessage(text: "Test message is here."), id: "m1", calling: [""])]
-    var hint:[Message] = [Message(body: TextMessage(text: "asdfasdfasdf"), id:"m1", calling:[String]())]
-    var p : Puzzle = Puzzle(location: loc, messages: mes, hints: hint)
+    var mes1:Message = Message(body:TextMessage(text: "Test message is here."), id: "m1")
+    mes1.delivered = true;
+    var mes2:Message = Message(body: TextMessage(text: "asdfasdfa sdf asdfa dsa as dfas;dlkfjas;ldk jfa;sldkjfas;ldkfja;slkdj fa;sldkj;aslkdj ;adslk jda;lk jds;lkaj l;ksjd ;alksjdf ;laksjd f;laksjd f;laksjdf ;lakjsd;fl kjas;dlk jas;l dkjal;sdkjf a;lsdkjf;alskdjf;alskjdf"), id:"m2")
+    mes2.delivered = true
+    var mArray:[Message] = [mes1, mes2]
+    var p : Puzzle = Puzzle(location: loc, messages: mArray, triggers: [Trigger]())
     return p
 }
 
