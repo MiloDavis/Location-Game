@@ -34,8 +34,8 @@ class SharedLocation: NSObject, CLLocationManagerDelegate {
     override init() {
         super.init()
         self.locationManager.delegate = self
-        self.locationManager.distanceFilter  = 100
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        self.locationManager.distanceFilter  = 50
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         self.locationManager.startUpdatingLocation()
         self.locationManager.requestAlwaysAuthorization()
         
