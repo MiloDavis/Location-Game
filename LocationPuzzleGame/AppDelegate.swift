@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
         let settings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
         application.registerUserNotificationSettings(settings)
-        //TimeTrigger(messageID: "m1", delay: 10)
+        TimeTrigger(messageID: "m1", delay: 2)
         
 
         

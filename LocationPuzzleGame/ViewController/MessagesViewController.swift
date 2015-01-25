@@ -17,7 +17,6 @@ class MessagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         renderMessages([TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field"), TextMessage(text:"asdfasdfasdfasdfasdf"), ImageMessage(imageName:"field"),ImageMessage(imageName:"field"),ImageMessage(imageName:"field")])
-
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(animated: Bool) {

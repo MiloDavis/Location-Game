@@ -55,7 +55,7 @@
         <!--Messages View Controller-->
         <scene sceneID="s3d-Ic-a5K">
             <objects>
-                <viewController id="OTL-zC-Fae" customClass="MessagesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessagesViewController" id="OTL-zC-Fae" customClass="MessagesViewController" customModule="LocationPuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GvR-dN-R0t"/>
                         <viewControllerLayoutGuide type="bottom" id="m1b-WX-xUk"/>
@@ -77,7 +77,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Yna-1w-OIx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ama-9A-gL5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ama-9A-gL5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVi-Yw-VzY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

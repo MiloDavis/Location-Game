@@ -1,4 +1,5 @@
 import UIKit
+import AudioToolbox
 
 // Creates a message
 protocol MessageBody{
@@ -69,12 +70,15 @@ class Message {
             
         }
         else if(self.body.type == "Text"){
-            var alert = UIAlertView()
+            /*var alert = UIAlertView()
             alert.title = "New Secure Communication:"
             alert.message = self.body.text
             alert.addButtonWithTitle("Later")
             alert.addButtonWithTitle("View")
-            alert.show()
+            alert.show()*/
+            
+            /*var rootViewController = AppDelegate().window!.rootViewController*/
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
         }
         
