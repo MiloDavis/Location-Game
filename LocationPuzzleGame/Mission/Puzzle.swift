@@ -12,11 +12,14 @@ import CoreLocation
 class Puzzle {
     var location: CLLocationCoordinate2D
     var messages: [Message]
-    var hints: [Message]
+    var triggers: [Trigger]
     
-    init(location: CLLocationCoordinate2D, messages:[Message], hints: [Message]) {
+    init(location: CLLocationCoordinate2D, messages:[Message], triggers: [Trigger]){
         self.location = location
         self.messages = messages
-        self.hints = hints
+        self.triggers = triggers
+        if(self.triggers.count != 0){
+            self.triggers[0].start()
+        }
     }
 }
