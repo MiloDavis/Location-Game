@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		563780241A754D22005256D8 /* SharedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563780231A754D22005256D8 /* SharedLocation.swift */; };
+		568E928E1A74555500091BED /* PuzzlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E928D1A74555500091BED /* PuzzlesViewController.swift */; };
+		704180FA1A75612700E3B457 /* Puzzles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704180F91A75612700E3B457 /* Puzzles.swift */; };
 		70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159231A734BEB00F29535 /* AppDelegate.swift */; };
 		70B159271A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70B159251A734BEB00F29535 /* LocationPuzzleGame.xcdatamodeld */; };
 		70B1592C1A734BEB00F29535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B1592A1A734BEB00F29535 /* Main.storyboard */; };
@@ -19,7 +21,6 @@
 		70B159551A73985300F29535 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B159541A73985300F29535 /* MessagesViewController.swift */; };
 		E46547A41A73B7B1006E2D63 /* scouting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46547A21A73B7B1006E2D63 /* scouting.jpg */; };
 		E4AFCFD11A74064400EDC973 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFCFD01A74064400EDC973 /* Solution.swift */; };
-		E4AFCFD31A74066900EDC973 /* CoreLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFCFD21A74066900EDC973 /* CoreLocationController.swift */; };
 		E4AFCFD51A7406E000EDC973 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFCFD41A7406E000EDC973 /* World.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		563780231A754D22005256D8 /* SharedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedLocation.swift; sourceTree = "<group>"; };
+		568E928D1A74555500091BED /* PuzzlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzlesViewController.swift; sourceTree = "<group>"; };
+		704180F91A75612700E3B457 /* Puzzles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzles.swift; sourceTree = "<group>"; };
 		70B1591E1A734BEB00F29535 /* LocationPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B159221A734BEB00F29535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B159231A734BEB00F29535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		70B159541A73985300F29535 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ViewController/MessagesViewController.swift; sourceTree = "<group>"; };
 		E46547A21A73B7B1006E2D63 /* scouting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scouting.jpg; path = Mission/imageMessages/scouting.jpg; sourceTree = "<group>"; };
 		E4AFCFD01A74064400EDC973 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
-		E4AFCFD21A74066900EDC973 /* CoreLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationController.swift; sourceTree = "<group>"; };
 		E4AFCFD41A7406E000EDC973 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		704180FB1A75612C00E3B457 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				704180F91A75612700E3B457 /* Puzzles.swift */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
 		70B159151A734BEB00F29535 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				E4AFCFD01A74064400EDC973 /* Solution.swift */,
-				E4AFCFD21A74066900EDC973 /* CoreLocationController.swift */,
 				E4AFCFD41A7406E000EDC973 /* World.swift */,
+				704180FB1A75612C00E3B457 /* Content */,
 				563780231A754D22005256D8 /* SharedLocation.swift */,
 				70B159231A734BEB00F29535 /* AppDelegate.swift */,
 				70B1592A1A734BEB00F29535 /* Main.storyboard */,
@@ -265,6 +275,7 @@
 				E4AFCFD31A74066900EDC973 /* CoreLocationController.swift in Sources */,
 				70B1594D1A73832400F29535 /* Message.swift in Sources */,
 				E4AFCFD51A7406E000EDC973 /* World.swift in Sources */,
+				704180FA1A75612700E3B457 /* Puzzles.swift in Sources */,
 				563780241A754D22005256D8 /* SharedLocation.swift in Sources */,
 				70B159241A734BEB00F29535 /* AppDelegate.swift in Sources */,
 			);

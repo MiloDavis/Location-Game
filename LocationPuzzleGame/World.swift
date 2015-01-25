@@ -17,13 +17,13 @@ class World {
 
     var puzzles : [Puzzle] = [initPuzzle()]
     var currentPuzzleIndex: Int = 1
-    var currentPuzzle: Puzzle? = nil
+    var currentPuzzle: Puzzle
     var recievedMessages: [Message] = []
     var unreadMessages: Int = 0
     var messageSenders: [MessageSender] = [MessageSender(name:"Jefferson", imageName:"qm"), MessageSender(name:"Washington", imageName:"guyFawkes")]
     
     init() {
-        
+        self.currentPuzzle = initPuzzle()
     }
     
     func resume() -> Puzzle {
@@ -41,12 +41,12 @@ class World {
     }
     
     func getAnswerRegion() -> CLRegion {
-        return CLCircularRegion(center:CLLocationCoordinate2D(latitude: 42.336751, longitude: -71.0911301), radius:20, identifier:"location") //CLCircularRegion(center: self.currentPuzzle!.location, radius: 30.0, identifier: "location")
+       return CLCircularRegion(center: self.currentPuzzle.location, radius: 30, identifier: "location")
     }
     
 }
 
-func initPuzzle() -> Puzzle{
+func initPuzzle() -> Puzzle {
     var loc = CLLocationCoordinate2D(latitude: 42.336751, longitude: -71.0911301)
     var mes1:Message = Message(body:TextMessage(text: "Test message is here."), id: "m1")
     mes1.delivered = true;
