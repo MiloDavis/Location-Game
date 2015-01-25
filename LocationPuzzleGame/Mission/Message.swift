@@ -53,10 +53,13 @@ class Message {
         
     }
     func deliver(){
+        
         self.alert()
         var w = World.sharedInstance
         var messages = w.puzzles[w.currentPuzzleIndex].messages
         self.delivered = true
+        println(self.body.text)
+        
     }
     
     func alert(){

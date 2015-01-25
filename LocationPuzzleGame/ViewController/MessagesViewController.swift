@@ -18,18 +18,26 @@ class MessagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         renderMessages()
+
         // Do any additional setup after loading the view.
     }
+    
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
     }
+    func rerender() {
+        renderMessages()
+    }
+    
     func renderMessages(){
         var w = World.sharedInstance
         var messages = [Message]()
         for (var i=0; i<w.currentPuzzleIndex; i++){
             messages += w.puzzles[i].messages
         }
-        messages = messages.reverse()
+        
+        
         var yStart:CGFloat = 30
         for message in messages{
             if(!message.delivered){
@@ -43,6 +51,8 @@ class MessagesViewController: UIViewController {
             }
             messagesScrollview.contentSize = CGSize(width:UIScreen.mainScreen().bounds.width, height: yStart)
         }
+        
+        self.messagesScrollview.setNeedsDisplay()
     }
     
     // Renders a TextMessage

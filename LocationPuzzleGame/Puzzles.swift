@@ -88,8 +88,8 @@ import CoreLocation
         p0_m3.delivered = true
         p0_m4.delivered = true
         p0_m5.delivered = true
-        self.p0 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.349564, longitude: -71.077840), messages: [p0_m1, p0_m2, p0_m3, p0_m4, p0_m5], triggers: [])
-        self.p1 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.366433, longitude: -71.054330), messages: [p1_m1, p1_m2, p1_m3, p1_m4, p1_m5, p1_m6], triggers: [TimeTrigger(id: "p1_t1", messageID: "p1_m1", delay: 180, calling: "p1_t2"),TimeTrigger(id: "p1_t2", messageID: "p1_m2", delay: 120, calling: "p1_t3"),TimeTrigger(id: "p1_t3", messageID: "p1_m3", delay: 180, calling: "")])
+        self.p0 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.349564, longitude: -71.077840), messages: [p0_m1, p0_m2, p0_m3, p0_m4, p0_m5], triggers: [TimeTrigger(id: "p1_t1", messageID: "p1_m1", delay: 5, calling: "p1_t2")])
+        self.p1 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.366433, longitude: -71.054330), messages: [p1_m1, p1_m2, p1_m3, p1_m4, p1_m5, p1_m6], triggers: [TimeTrigger(id: "p1_t2", messageID: "p1_m2", delay: 120, calling: "p1_t3"),TimeTrigger(id: "p1_t3", messageID: "p1_m3", delay: 180, calling: "")])
         self.p2 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.358932, longitude: -71.063767), messages: [p2_m1, p2_m2, p2_m3], triggers: [])
         self.p3 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.348690, longitude: -71.082719), messages: [p3_m1, p3_m2], triggers: [])
         self.p4 = Puzzle(location: CLLocationCoordinate2D(latitude: 42.360295, longitude: -71.082719), messages: [p4_m1, p4_m2, p4_m3, p4_m4], triggers: [])
