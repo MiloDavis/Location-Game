@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
         application.registerUserNotificationSettings(settings)
         
-        //TimeTrigger(messageID: "m1", delay: 2)
+        //  TimeTrigger(messageID: "m1", delay: 2)
         
 
         
